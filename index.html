@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Test Website</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/angular.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav class="navbar">
+           <div class="row">
+            <a class="navbar-brand" href="javascript:void(0)"><img src="img/logo.png" /></a>
+            <ul class="navbar-links">
+                <li><a href="javascript:void(0)">Despre proiect</a></li>
+                <li><a href="javascript:void(0)">Arhiva</a></li>
+                <li><a href="javascript:void(0)">Agentii</a></li>
+                <li>
+                  <a class="button button-primary" href="javascript:void(0)">Inscrie un site <i class="sprite sprite-ic_arrow_thin"></i>
+              </a>
+            </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <section class="slider-container">
+        <div class="row">
+          <div id="slider">
+
+            <a href="#" class="control_next"><i class="sprite sprite-ic_arrow_right"></i></a>
+            <a href="#" class="control_prev"><i class="sprite sprite-ic_arrow_left"></i></a>
+
+            <ul>
+            <li>SLIDE 1</li>
+            <li style="background: #aaa;">SLIDE 2</li>
+            <li>SLIDE 3</li>
+            <li style="background: #aaa;">SLIDE 4</li>
+            </ul>  
+
+          </div>
+        </div>
+      </section>
+
+      <div class="push"></div>
+    </div>
+
+    <footer>
+        <small>&copy;2010 <span>unSITEpeZI</span></small>
+    </footer>
+    
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/ajax.js"></script>
+
+     <!--[if lte IE 8]>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            angular.bootstrap(document);
+        });
+    </script>
+<![endif]-->
+  </body>
+</html>

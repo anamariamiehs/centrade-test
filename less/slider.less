@@ -1,0 +1,53 @@
+.slider-container {
+	background-color: @color-primary;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+
+  ul {
+  	position: relative;
+	margin: 0;
+	padding: 0;
+	width: @dimen-container-lg;
+	height: @dimen-slider-height;
+	list-style: none;
+	overflow: hidden;
+
+	li {
+	  position: relative;
+	  display: block;
+	  float: left;
+	  margin: 0;
+	  padding: 0;
+	  width: @dimen-container-lg;
+	  height: @dimen-slider-height;
+	  background: #ccc;
+	  text-align: center;
+	  line-height: 300px;
+	}
+  }
+
+	a.control_prev, a.control_next {
+	  position: absolute;
+	  top: 40%;
+	  z-index: 999;
+	  display: block;
+	  padding: @dimen;
+	  width: auto;
+	  height: auto;
+	  .hoverFade();
+	}
+
+	a.control_prev {
+	  left: 0;
+	}
+
+	a.control_next {
+	  right: 0;
+	}
+
+}

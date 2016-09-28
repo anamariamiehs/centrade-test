@@ -1,2 +1,2 @@
-# centrade-test
+centrade-test
 admission test

@@ -1,0 +1,89 @@
+.fontFace(@aFontName, @aFontFile, @aFontWeight: normal, @aFontStyle: normal) {
+	@font-face {
+		font-family: @aFontName;
+		src: url('@{fonts-path}@{aFontFile}.eot');
+		src: url('@{fonts-path}@{aFontFile}.eot?#iefix') format('embedded-opentype'),
+			 url('@{fonts-path}@{aFontFile}.woff') format('woff'),
+			 url('@{fonts-path}@{aFontFile}.ttf') format('truetype'),
+			 url('@{fonts-path}@{aFontFile}.svg#@{aFontName}') format('svg');
+		font-weight: @aFontWeight;
+		font-style: @aFontStyle;
+	}
+}
+
+.clearfix {
+	/**
+	* For modern browsers
+	* 1. The space content is one way to avoid an Opera bug when the
+	*    contenteditable attribute is included anywhere else in the document.
+	*    Otherwise it causes space to appear at the top and bottom of elements
+	*    that are clearfixed.
+	* 2. The use of `table` rather than `block` is only necessary if using
+	*    `:before` to contain the top-margins of child elements.
+	*/
+	&:before,
+	&:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.boxSizing(@aValue: border-box) {
+	-webkit-box-sizing: @aValue;
+	   -moz-box-sizing: @aValue;
+	    -ms-box-sizing: @aValue;
+	        box-sizing: @aValue;
+}
+
+.makeRow(@max: @dimen-container-lg) {
+	max-width: @max;
+	width: 100%;
+	.centerBlock();
+}
+
+.makeContainer(){
+    float:left;
+    margin-left:-@dimen/2;
+    margin-right:-@dimen/2;
+    .boxSizing();
+	.clearfix();
+}
+
+.makeGrid(@col : 12, @grid: 12){
+    float:left;
+	padding-left:@dimen/2;
+    padding-right:@dimen/2;
+    .boxSizing();
+    width:@col*100/@grid + 0%;
+	.clearfix();
+}
+
+.centerBlock() {
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.borderRadius(@aValue: 0) {
+    -webkit-border-radius: @aValue;
+       -moz-border-radius: @aValue;
+        -ms-border-radius: @aValue;
+            border-radius: @aValue;
+}
+
+
+.hoverFade() {
+	-webkit-transition: opacity 300ms cubic-bezier(0.5, 0.10, 0.25, 0.95);  
+	-moz-transition:    opacity 300ms cubic-bezier(0.5, 0.10, 0.25, 0.95);
+	-ms-transition:     opacity 300ms cubic-bezier(0.5, 0.10, 0.25, 0.95); 
+	-o-transition:      opacity 300ms cubic-bezier(0.5, 0.10, 0.25, 0.95);
+    transition:         opacity 300ms cubic-bezier(0.5, 0.10, 0.25, 0.95);
+    opacity:1;
+	&:hover, &:active, &.active {
+      opacity: .7;  
+    }
+}

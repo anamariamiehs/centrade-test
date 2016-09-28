@@ -1,0 +1,83 @@
+
+//STICKY FOOTER
+
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -(@dimen-footer-height + @dimen);
+}
+footer {
+	height: @dimen-footer-height;
+	margin-top: @dimen;
+}
+
+.push {
+	height: @dimen-footer-height + @dimen;
+}
+
+// LAYOUT
+
+.row {
+	.makeRow();
+}
+
+
+//NAVIGATION
+
+nav {
+	.row {
+		padding:@dimen 0;
+	}
+	vertical-align: baseline;
+
+	.navbar-brand {
+		display: inline-block;
+		width: @dimen-brand-width;
+		height: @dimen-brand-height;
+
+		img{
+			max-width: 100%;
+		}
+	}
+
+	ul.navbar-links {
+		display: inline-block;
+		text-align: right;
+		font-size: @font-medium;
+		width: 100%;
+		margin-left: -(@dimen-brand-width + @dimen);
+		padding-left: @dimen-brand-width + @dimen;
+		.boxSizing();
+		li {
+			display: inline-block;
+			a{
+				display: block;
+				padding: 3px @dimen/2;
+				color:@text-color-dark;
+				.hoverFade();
+			}
+		}
+	}
+	.clearfix();
+}
+
+//SLIDER
+
+
+
+
+// FOOTER
+footer {
+	.makeRow();
+	border-top:1px solid @footer-border-color;
+	.boxSizing();
+	padding-top: @dimen;
+	small {
+		color:@text-color-dark;
+		span {
+			font-weight: bold;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.sprite {
+    display: inline-block;
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+
+    &.sprite-ic_arrow_left {
+        .stitches-sprite(-5px, -5px, 13px, 12px);
+    }
+
+    &.sprite-ic_arrow_right {
+        .stitches-sprite(-28px, -5px, 13px, 12px);
+    }
+
+    &.sprite-ic_arrow_thin {
+        .stitches-sprite(-51px, -5px, 12px, 11px);
+    }
+
+    &.sprite-ic_caret_black {
+        .stitches-sprite(-73px, -5px, 5px, 7px);
+    }
+
+    &.sprite-ic_caret_button {
+        .stitches-sprite(-88px, -5px, 16px, 16px);
+    }
+
+    &.sprite-ic_chat {
+        .stitches-sprite(-114px, -5px, 15px, 13px);
+    }
+
+    &.sprite-ic_facebook_black {
+        .stitches-sprite(-139px, -5px, 7px, 12px);
+    }
+
+    &.sprite-ic_question {
+        .stitches-sprite(-156px, -5px, 10px, 15px);
+    }
+
+    &.sprite-ic_smiley_black {
+        .stitches-sprite(-176px, -5px, 12px, 12px);
+    }
+
+    &.sprite-ic_twitter {
+        .stitches-sprite(-198px, -5px, 11px, 16px);
+    }
+
+    &.sprite-ic_twitter_black {
+        .stitches-sprite(-219px, -5px, 8px, 12px);
+    }
+}

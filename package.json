@@ -1,0 +1,18 @@
+{
+  "name": "centrade-test",
+  "version": "1.0.0",
+  "description": "admission test",
+  "license": "GNU",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anamariamiehs/centrade-test.git"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-reload": "^0.2.0",
+    "jit-grunt": "^0.10.0"
+  }
+}
